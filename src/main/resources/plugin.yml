@@ -1,0 +1,16 @@
+name: CustomSpawnpoint
+version: '${project.version}'
+main: com.dpolit.customspawnpoint.CustomSpawnpoint
+api-version: 1.18
+authors: [ Ahmyia ]
+description: Simple plugin to custom location of spawnpoint for players after first visit/dead etc..
+commands:
+  setspawn:
+    description: Set spawnpoint.
+    usage: /setspawn
+  spawn:
+    description: Teleport you to spawnpoint.
+    usage: /spawn
+  customSpawnpoint-reload:
+    description: reload plugin config file.
+    usage: /customSpawnpoint-reload

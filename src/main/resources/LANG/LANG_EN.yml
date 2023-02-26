@@ -1,0 +1,10 @@
+messages:
+  commands:
+    general:
+      noPermissions: §cYou don't have permissions for this action.
+    setSpawn:
+      success: §aSpawn created successfully.
+    spawn:
+      success: §aTeleporting.
+    reload:
+      success: §aReload completed.

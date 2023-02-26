@@ -1,0 +1,34 @@
+settings:
+  prefix: §7[§2CustomSpawnpoint§7] §f
+  language: EN
+
+  spawnOnJoin: true
+
+permissions:
+  commands:
+    admin:
+      setSpawnpoint: customSpawnpoint.commands.admin.setSpawnpoint
+      reload: customSpawnpoint.commands.admin.reload
+data:
+  spawnpoints:
+    firstJoin:
+      world: world
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+    death:
+      world: world
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
+    default:
+      world: world
+      x: 0
+      y: 0
+      z: 0
+      yaw: 0
+      pitch: 0
