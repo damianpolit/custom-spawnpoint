@@ -1,8 +1,14 @@
 settings:
-  prefix: §7[§2CustomSpawnpoint§7] §f
+  prefix: "&7[&2CustomSpawnpoint&7] &f"
+
+  #set your language for plugin based on LANG directory
   language: EN
 
+  #TODO
   spawnOnJoin: true
+
+  #set delay that player have to wait without moving
+  delay: 5
 
 permissions:
   commands:
