@@ -1,10 +1,12 @@
 messages:
   commands:
     general:
-      noPermissions: §cYou don't have permissions for this action.
+      noPermissions: "&cYou don't have permissions for this action."
     setSpawn:
-      success: §aSpawn created successfully.
+      success: "&aSpawn created successfully."
+      countdown: "&aTeleporting to spawn in %countDown% seconds. Don't move!"
     spawn:
-      success: §aTeleporting.
+      success: "&aTeleporting."
+      cancelled: "&cTeleportation canceled."
     reload:
-      success: §aReload completed.
+      success: "&aReload completed."
