@@ -10,6 +10,7 @@ import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -27,6 +28,7 @@ public class SpawnCommand implements CommandExecutor {
 
     private final LanguageManager languageManager;
     private final TaskManager taskManager;
+    private final FileConfiguration config = getPlugin().getConfig();
 
     public SpawnCommand(LanguageManager languageManager, TaskManager taskManager) {
         this.languageManager = languageManager;
@@ -35,6 +37,9 @@ public class SpawnCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+        if (!config.getBoolean("data.spawnpoints.default.enable")) {
+            return false;
+        }
         Optional.of(sender)
                 .filter(Player.class::isInstance)
                 .map(Player.class::cast)
@@ -76,7 +81,7 @@ public class SpawnCommand implements CommandExecutor {
                 });
         return true;
     }
-    
+
     private int getDelay() {
         return getPlugin().getConfig().getInt("settings.delay");
     }
