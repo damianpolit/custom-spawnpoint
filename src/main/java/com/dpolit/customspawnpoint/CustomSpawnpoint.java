@@ -4,10 +4,12 @@ import com.dpolit.customspawnpoint.commands.ReloadCommand;
 import com.dpolit.customspawnpoint.commands.SetSpawnCommand;
 import com.dpolit.customspawnpoint.commands.SpawnCommand;
 import com.dpolit.customspawnpoint.domain.TaskManager;
+import com.dpolit.customspawnpoint.listeners.PlayerRespawnListener;
 import com.dpolit.customspawnpoint.util.LanguageManager;
 import lombok.extern.slf4j.Slf4j;
 import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.BufferedReader;
@@ -47,15 +49,22 @@ public final class CustomSpawnpoint extends JavaPlugin {
         getConsole().sendMessage(getPrefix() + "§aLanguage: " + getConfig().getString(LANGUAGE_CONFIG) + ".yml was loaded successfully.");
 
         registerCommands();
+        registerListeners();
 
         getConsole().sendMessage(getPrefix() + "§aPlugin was activated successfully.");
 
     }
 
     private void registerCommands() {
-        getCommand("setspawn").setExecutor(new SetSpawnCommand(languageManager, getConfig()));
-        getCommand("spawn").setExecutor(new SpawnCommand(getConfig(), languageManager, taskManager));
+        getCommand("setspawn").setExecutor(new SetSpawnCommand(languageManager));
+        getCommand("spawn").setExecutor(new SpawnCommand(languageManager, taskManager));
         getCommand("customSpawnpoint-reload").setExecutor(new ReloadCommand(languageManager));
+    }
+
+    private void registerListeners() {
+        final PluginManager pluginManager = Bukkit.getPluginManager();
+
+        pluginManager.registerEvents(new PlayerRespawnListener(), this);
     }
 
     @Override
