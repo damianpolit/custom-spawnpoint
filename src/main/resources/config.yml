@@ -1,10 +1,19 @@
+#            __ __  _     ______  ____  ___ ___   ____  ______    ___       _____ ____    ____  __    __  ____
+#          |  T  T| T   |      Tl    j|   T   T /    T|      T  /  _]     / ___/|    \  /    T|  T__T  T|    \
+#          |  |  || |   |      | |  T | _   _ |Y  o  ||      | /  [_     (   \_ |  o  )Y  o  ||  |  |  ||  _  Y
+#          |  |  || l___l_j  l_j |  | |  \_/  ||     |l_j  l_jY    _]     \__  T|   _/ |     ||  |  |  ||  |  |
+#          |  :  ||     T |  |   |  | |   |   ||  _  |  |  |  |   [_      /  \ ||  |   |  _  |l  `  '  !|  |  |
+#          l     ||     | |  |   j  l |   |   ||  |  |  |  |  |     T     \    ||  |   |  |  | \      / |  |  |
+#          \__,_jl_____j l__j  |____jl___j___jl__j__j  l__j  l_____j      \___jl__j   l__j__j  \_/\_/  l__j__j
+#
+
 settings:
   prefix: "&7[&2CustomSpawnpoint&7] &f"
 
   #set your language for plugin based on LANG directory
   language: EN
 
-  #TODO should player be teleported to death spawn if has bed respawn location?
+  #should player be teleported to death spawn if it has bed respawn location?
   deathSpawnWhenBedSpawnIsCreated: true
 
   #set delay that player have to wait without moving
@@ -18,7 +27,7 @@ permissions:
 data:
   spawnpoints:
     firstjoin:
-      #is first join spawn is enable
+      #is first join spawn enabled
       enable: true
       world: world
       x: 0
@@ -27,7 +36,7 @@ data:
       yaw: 0
       pitch: 0
     death:
-      #is death spawn is enable
+      #is death spawn enabled
       enable: true
       world: world
       x: 0
@@ -36,7 +45,7 @@ data:
       yaw: 0
       pitch: 0
     default:
-      #is /spawn command is enable
+      #is /spawn command enabled
       enable: true
       world: world
       x: 0
