@@ -7,8 +7,11 @@ settings:
   #TODO
   spawnOnJoin: true
 
+  #TODO should player be teleported to death spawn if has bed respawn location?
+  deathSpawnWhenBedSpawn: true
+
   #set delay that player have to wait without moving
-  delay: 5
+  delay: 3
 
 permissions:
   commands:
@@ -17,7 +20,7 @@ permissions:
       reload: customSpawnpoint.commands.admin.reload
 data:
   spawnpoints:
-    firstJoin:
+    firstjoin:
       world: world
       x: 0
       y: 0
