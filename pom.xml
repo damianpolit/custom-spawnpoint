@@ -18,6 +18,7 @@
         <paper-api.version>1.19.3-R0.1-SNAPSHOT</paper-api.version>
         <maven-shade-plugin.version>3.2.4</maven-shade-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <lombok.version>1.18.22</lombok.version>
     </properties>
 
     <build>
@@ -77,7 +78,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>${lombok.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

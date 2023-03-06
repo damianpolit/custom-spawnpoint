@@ -4,7 +4,6 @@ import com.dpolit.customspawnpoint.CustomSpawnpoint;
 import com.dpolit.customspawnpoint.domain.Cords;
 import com.dpolit.customspawnpoint.domain.SpawnEvent;
 import com.dpolit.customspawnpoint.util.LanguageManager;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -15,7 +14,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;
 
-import static com.dpolit.customspawnpoint.CustomSpawnpoint.getConsole;
 import static com.dpolit.customspawnpoint.CustomSpawnpoint.getPlugin;
 import static com.dpolit.customspawnpoint.util.LanguageShortcuts.SET_SPAWN_MESSAGE;
 
@@ -97,7 +95,6 @@ public class SetSpawnCommand implements CommandExecutor {
 
     private void setConfigSpawnpointLocation(String world, double x, double y, double z, double yaw, double pitch, SpawnEvent type) {
         String eventType = type.toString().toLowerCase();
-        getConsole().sendMessage(ChatColor.RED + eventType);
         config.set("data.spawnpoints." + eventType + ".world", world);
         config.set("data.spawnpoints." + eventType + ".x", x);
         config.set("data.spawnpoints." + eventType + ".y", y);

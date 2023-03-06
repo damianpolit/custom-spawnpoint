@@ -4,11 +4,8 @@ settings:
   #set your language for plugin based on LANG directory
   language: EN
 
-  #TODO
-  spawnOnJoin: true
-
   #TODO should player be teleported to death spawn if has bed respawn location?
-  deathSpawnWhenBedSpawn: true
+  deathSpawnWhenBedSpawnIsCreated: true
 
   #set delay that player have to wait without moving
   delay: 3
@@ -21,6 +18,8 @@ permissions:
 data:
   spawnpoints:
     firstjoin:
+      #is first join spawn is enable
+      enable: true
       world: world
       x: 0
       y: 0
@@ -28,6 +27,8 @@ data:
       yaw: 0
       pitch: 0
     death:
+      #is death spawn is enable
+      enable: true
       world: world
       x: 0
       y: 0
@@ -35,6 +36,8 @@ data:
       yaw: 0
       pitch: 0
     default:
+      #is /spawn command is enable
+      enable: true
       world: world
       x: 0
       y: 0
